@@ -5,8 +5,8 @@ import Card from "./Card";
 const Search = () => {
     const [data, setData] = useState({
         categories: [],
-        category: '',
-        search: '',
+        category: "",
+        search: "",
         results: [],
         searched: false
     });
@@ -66,9 +66,12 @@ const Search = () => {
                 <h2 className="mt-4 mb-4">
                     {searchMessage(searched, results)}
                 </h2>
+
                 <div className="row">
                     {results.map((product, i) => (
-                        <Card key={i} product={product} />
+                        <div className="col-4 mb-3">
+                            <Card key={i} product={product} />
+                        </div>
                     ))}
                 </div>
             </div>
